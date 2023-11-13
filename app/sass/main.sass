@@ -1,0 +1,565 @@
+@import config
+
+/*Global*/
+*
+  box-sizing: border-box
+
+.noscrole
+  overflow: hidden
+.container
+  max-width: 1280px
+  margin: 0 auto
+  padding: 0 15px
+
+.section
+  width: 100%
+  padding: 50px 0
+  +media-breakpoint-up(sm)
+    padding: 100px 0
+  &_pb0
+    padding-bottom: 0
+  &_pt0
+    padding-top: 0
+
+.section__text
+  width: 100%
+  +media-breakpoint-up(sm)
+    width: 60vw
+
+.section__flex
+  +media-breakpoint-up(sm)
+    display: flex
+    align-items: center
+    justify-content: space-between
+.title
+  color: #000
+  font-size: 32px
+  font-weight: 700
+  line-height: 48px
+  margin-bottom: 20px
+  span
+    background-color: #F4D3A1
+    padding: 0 5px
+  &_center
+    text-align: center
+  +media-breakpoint-up(sm)
+    font-size: 54px
+    line-height: 64px
+
+.title-2
+  color: #000000
+  font-size: 24px
+  font-family: 'Mediator',Arial,sans-serif
+  line-height: 48px
+  font-weight: 700
+  +media-breakpoint-up(sm)
+    font-size: 36px
+
+.title-3
+  color: #000000
+  font-size: 18px
+  font-family: 'Mediator',Arial,sans-serif
+  line-height: 48px
+  font-weight: 600
+  +media-breakpoint-up(sm)
+    font-size: 24px
+  &_mt
+    margin-top: -65px
+
+.text
+  color: #6b625e
+  font-size: 14px
+  font-family: 'Mediator',Arial,sans-serif
+  line-height: 24px
+  font-weight: 400
+  +media-breakpoint-up(sm)
+    font-size: 18px
+
+.cens
+  color: rgb(36, 16, 8)
+  font-size: 14px
+  font-weight: 600
+  +media-breakpoint-up(sm)
+    font-size: 18px
+
+.button
+  line-height: 1.55
+  font-weight: 500
+  border-radius: 4px
+  border-style: solid
+  font-size: 14px
+  border: none
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 126px
+  height: 48px
+  cursor: pointer
+  transition: 0.5s
+  +media-breakpoint-up(sm)
+    font-size: 18px
+    width: 172px
+    height: 56px
+  &_bg-o
+    background-color: #ff733b
+    color: #fff
+    &:hover
+      background-color: #e06936
+    &:active
+      background-color: #e06936
+  &_bg-c
+    background-color: #f4d3a1
+    color: #000
+    &:hover
+      background-color: #e6c185
+    &:active
+      background-color: #e6c185
+  &_modal
+    width: 100%
+
+.burger
+  position: relative
+  width: 25px
+  height: 18px
+  display: flex
+  align-items: center
+  position: relative
+  z-index: 3
+  &::before
+    position: absolute
+    top: 0
+    left: 0
+    content: ""
+    width: 25px
+    height: 2px
+    background-color: #000
+    transition: all 0.5s
+  &::after
+    position: absolute
+    bottom: 0
+    left: 0
+    content: ""
+    width: 25px
+    height: 2px
+    background-color: #000
+    transition: all 0.3s
+  +media-breakpoint-up(md)
+    display: none
+  &.active
+    transition: 0.5s
+    &::before
+      top: 50%
+      transform: rotate(45deg) translate(0%, -60%)
+    &::after
+      bottom: 50%
+      transform: rotate(-45deg) translate(0, 50%)
+
+.burger-line
+  width: 25px
+  height: 2px
+  background-color: #000
+  &.active
+    display: none
+
+/*header*/
+.header
+  background-color: rgb(244, 236, 224)
+  position: fixed
+  width: 100%
+  z-index: 3
+  &.active
+    box-shadow: rgba(0,0,0,.13) 0 4px 16px
+
+.header__block
+  padding: 25px 0
+  display: flex
+  width: 100%
+  justify-content: space-between
+  align-items: center
+
+.menu__list
+  list-style: none
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  gap: 20px
+  font-size: 16px
+  font-weight: 500
+  text-transform: uppercase
+  padding: 20px
+  margin: 0
+  padding-top: 60px
+  +media-breakpoint-up(md)
+    flex-direction: row
+    align-items: center
+    font-size: 13px
+    padding: 0
+
+.menu__link
+  color: #000
+  text-decoration: none
+  transition: 0.5s
+  &:hover
+    text-decoration: none
+    color: #db7857
+  &:active
+    text-decoration: none
+    color: #db7857
+
+.menu__item.active>.menu__link
+  color: #241008
+  font-weight: 400
+  position: relative
+  transition: all 0.3s ease
+  &::after
+    content: ""
+    content: ''
+    position: absolute
+    left: 0
+    width: 100%
+    height: 2px
+    bottom: -1px
+    border-bottom: 1px solid #241008
+    box-shadow: inset 0px -1px 0px 0px #241008
+
+.menu__lang
+
+  &_btn
+    margin-right: 10px
+    cursor: pointer
+
+.logo
+  width: 100px
+  height: 100%
+  +media-breakpoint-up(md)
+    width: 160px
+
+.nav-menu
+  position: absolute
+  background-color: rgb(244, 236, 224)
+  top: 0
+  right: 0
+  transition: 0.5s
+  transform: translateX(200%)
+  &.open
+    transform: translateX(00%)
+  +media-breakpoint-up(md)
+    transform: translateX(0%)
+    position: static
+
+/*hero*/
+
+.hero
+  display: flex
+  padding-top: 25vh
+  justify-content: center
+  align-items: start
+  height: 120vh
+  +media-breakpoint-up(lg)
+    height: 140vh
+
+.hero__block
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 20px
+  position: relative
+  &::before
+    width: 100%
+    height: 100%
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    background-color: #F4ECE0
+    border-radius: 25px
+    opacity: 0.8
+    z-index: 1
+    +media-breakpoint-up(sm)
+      content: none
+  > .title
+    position: relative
+    z-index: 2
+  +media-breakpoint-up(md)
+    width: 768px
+
+.hero__button-block
+  display: flex
+  flex-direction: column
+  gap: 20px
+  position: relative
+  z-index: 2
+  +media-breakpoint-up(sm)
+    flex-direction: row
+
+/*product*/
+
+.section__blocks
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  gap: 20px
+  +media-breakpoint-up(sm)
+    gap: 40px
+  margin-top: 50px
+
+.products__box
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  width: 100%
+  border-radius: 8px
+  padding: 20px 0
+  +media-breakpoint-up(sm)
+    width: 360px
+    padding: 30px
+  &_c1
+    background-color: #e3f8fa
+  &_c2
+    background-color: #f4ece0
+  &_c3
+    background-color: #f5e6fe
+  &_c4
+    background-color: #ffe6e2
+  &_c5
+    background-color: #e0e6f4
+  &_c6
+    background-color: #e2fae3
+
+/*teacher*/
+
+.teacher__block
+  display: flex
+  gap: 20px
+  align-items: center
+  +media-breakpoint-up(md)
+    flex-direction: column
+    align-items: flex-start
+    width: 360px
+
+.teacher__img
+  border-radius: 8px
+  width: 80%
+  +media-breakpoint-up(sm)
+    width: 360px
+
+/*webinar*/
+
+.webinar-img
+  width: 100%
+  margin-top: 50px
+
+/*project*/
+
+.project-img
+  object-fit: cover
+  width: 100%
+  +media-breakpoint-up(sm)
+    width: 560px
+
+/*footer*/
+
+.footer
+  padding: 50px 0
+  background-color: #241008
+
+.footer-logo
+  width: 200px
+
+.footer__top
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.footer__menu-list
+  margin-top: 25px
+  list-style: none
+  display: flex
+  width: 100%
+  align-items: flex-start
+  gap: 10px
+  flex-direction: column
+  +media-breakpoint-up(md)
+    flex-direction: row
+    width: auto
+    gap: 20px
+
+.footer__menu-item
+  font-size: 14px
+  font-family: 'Mediator',Arial,sans-serif
+  line-height: 32px
+  font-weight: 400
+  margin: 0
+  border-color: transparent
+  border-style: solid
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, border-color 0.5s ease-in-out
+  text-transform: uppercase
+  +media-breakpoint-up(sm)
+    font-size: 16px
+
+.footer__menu-link,
+  text-decoration: none
+  color: #fff
+  &:hover
+    color: #ff733b
+    text-decoration: none
+
+.footer__mid
+  display: flex
+  justify-content: space-between
+  gap: 20px
+  padding: 25px 0
+  border-top: solid 1px #a39189
+  border-bottom: solid 1px #a39189
+  flex-direction: column
+  +media-breakpoint-up(md)
+    flex-direction: row
+
+.footer__text
+  color: #ffffff
+  font-size: 16px
+  font-family: 'Mediator',Arial,sans-serif
+  line-height: 28px
+  font-weight: 400
+  background-position: center center
+  border-color: transparent
+  border-style: solid
+  margin: 0
+  +media-breakpoint-up(sm)
+    font-size: 20px
+    line-height: 32px
+
+.footer__email
+  color: #ffffff
+  text-decoration: none
+  &:hover
+    color: #ffffff
+    text-decoration: none
+
+.footer__bottom
+  margin-top: 25px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  gap: 10px
+  flex-direction: column
+  +media-breakpoint-up(md)
+    flex-direction: row
+    gap: 40px
+
+.footer__bottom-text
+  color: #ffffff
+  font-size: 16px
+  font-family: 'Mediator',Arial,sans-serif
+  line-height: 25px
+  font-weight: 400
+  opacity: 0.5
+  background-position: center center
+  border-color: transparent
+  border-style: solid
+  margin: 0
+
+.footer__bottom-link
+  text-decoration: none
+  &:hover
+    color: #ff733b
+    text-decoration: none
+
+.footer__bottom-img
+  width: 160px
+
+/*modal*/
+
+.modal
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 10
+  width: 100%
+  height: 100%
+  background-color: rgba(0,0,0,.6)
+  opacity: 0
+  transition: 0.5s
+  transform: translateY(-10000%)
+  &.active
+    opacity: 1
+    transform: translateY(0%)
+
+.modal__flex
+  position: relative
+
+.modal-content__close
+  position: absolute
+  top: 5px
+  right: 5px
+  z-index: 3
+  background-color: #241008
+  border: 1px solid #fff
+  +media-breakpoint-up(sm)
+    top: 20px
+    right: 20px
+    border: none
+    background: none
+
+.modal-content
+  padding: 20px 25px
+  background-color: #241008
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  gap: 20px
+  width: 100%
+  +media-breakpoint-up(sm)
+    width: 560px
+    padding: 40px 45px
+
+.title-modal
+  color: #f4ece0
+  font-size: 24px
+  line-height: 28px
+  +media-breakpoint-up(sm)
+    font-size: 42px
+    line-height: 32px
+
+.text-modal
+  color: #f4ece0
+  font-size: 14px
+  line-height: 28px
+  text-align: center
+  +media-breakpoint-up(sm)
+    font-size: 16px
+    line-height: 16px
+
+.modal__flex
+  display: flex
+  justify-content: center
+  margin-top: 2.5vh
+  +media-breakpoint-up(sm)
+    margin-top: 5vh
+  +media-breakpoint-up(md)
+    margin-top: 10vh
+  +media-breakpoint-up(lg)
+    margin-top: 1vh
+  +media-breakpoint-up(wxp)
+    margin-top: 20vh
+
+.form
+  width: 100%
+  display: flex
+  flex-direction: column
+  gap: 20px
+
+.forminput
+  color: #f4ece0
+  border: 1px solid #dbd8d2
+  background-color: #241008
+  height: 60px
+  padding: 0 20px
+  font-size: 16px
+  line-height: 18px
+  width: 100%
+  outline: none
+  border-radius: 4px
