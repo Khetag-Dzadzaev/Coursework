@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DigEasy | Курсы веб дизайна</title>
-  <link rel="shortcut icon" href="images/favicon.ico">
+  <title>Web Dev</title>
+  <link rel="shortcut icon" href="images/fav-ico.png">
   <link rel="stylesheet" href="css/app.min.css" />
 </head>
 
@@ -13,7 +13,9 @@
   <header class="header">
     <div class="container">
       <div class="header__block">
-        <img src="./images/logo.svg" alt="" class="logo">
+        <a href="/" class="logo-link">
+          <img src="./images/logo.png" alt="" class="logo">
+        </a>
         <div class="burger">
           <div class="burger-line"></div>
         </div>
@@ -26,14 +28,16 @@
               <a href="#teacher" class="menu__link">Учителя</a>
             </li>
             <li class="menu__item">
-              <a href="#webinar" class="menu__link">Вебинары</a>
+              <a href="#work" class="menu__link">Работы наших учеников</a>
             </li>
             <li class="menu__item">
               <a href="#contact" class="menu__link">Контакты</a>
             </li>
-            <li class="menu_item menu__lang">
-              <span class="menu__lang_btn">EN</span>
-              <span class="menu__lang_btn">RU</span>
+            <li class="menu__item " id="button-modal">
+              <div class="button-setings">
+                <img src="./images/man.png" alt="" class="menu__img">
+                <p class="menu__link">Вход</p>
+              </div>
             </li>
           </ul>
         </nav>
@@ -43,14 +47,12 @@
   </header>
   <main class="main">
     <section class="section section_pb0 section_pt0" style=" background-position: top;
-  background-size: cover;  background-image: url(./images/dest/bg-hero.svg); ">
+  background-size: cover; background-repeat: no-repeat;  background-image: url(./images/bg-hero.png); ">
       <div class="container">
         <div class="hero">
           <div class="hero__block">
-            <h1 class="title title_center">Мы Обучаем <span>Веб Дизайну</span> Вы Прогрессируете</h1>
+            <h1 class="title title_aling">Мы Обучаем Веб - Разработке Вы Прогрессируете</h1>
             <div class="hero__button-block">
-              <div class="button button_bg-o" id="button-modal">Начать</div>
-              <div href="#curs" class="button button_bg-c">О курсах</div>
             </div>
 
           </div>
@@ -61,62 +63,60 @@
       <div class="container">
         <div class="section__text">
           <h2 class="title-2">Программы и курсы</h2>
-          <p class="text">Наши курсы подходит дизайнерам любого уровня. Наши менторы помогают построить план для
-            развития
-            как начинающим, так и
-            более опытным ребятам. В сервисе есть возможность для развития с любым бэкграундом. Поэтому не переживай,
-            если
-            чего-то
-            не знаешь. Или если знаешь много. Нам точно есть, чем тебя удивить.</p>
+          <p class="text">Освойте все навыки веб-разработки и станьте настоящим профессионалом вместе с компанией Web
+            dev! Наши программы и курсы
+            предлагают полное погружение в мир веб-технологий, чтобы вы могли создавать удивительные и инновационные
+            сайты.</p>
         </div>
         <div class="section__blocks">
-          <div class="products__box products__box_c1">
-            <img src="./images/dest/cartochka-1.svg" alt="img" class="products__img">
-            <p class="title-3 title-3_mt">App Design</p>
+          <div class="products__box ">
+            <img src="./images/html5_css3.png" alt="img" class="products__img">
+            <p class="title-3">HTML & CSS</p>
             <p class="text">Вы научитесь проектировать мобильные приложения, которые будут решать как проблемы
               пользователей, так и задачи бизнеса.</p>
-            <p class="cens">453 000.00 KZT</p>
-            <div class="button button_bg-o">Преобрести</div>
+            <p class="cens">150 000 руб</p>
+            <!-- <a href="single-product.html" class="button button_bg-o">Узнать больше</a> -->
+            <div class="button button_bg-o" id="button-modal">Узнать больше</div>
           </div>
-          <div class="products__box products__box_c2">
-            <img src="./images/dest/cartochka-1.svg" alt="img" class="products__img">
-            <p class="title-3 title-3_mt">App Design</p>
+          <div class="products__box ">
+            <img src="./images/html5_css3.png" alt="img" class="products__img">
+            <p class="title-3">HTML & CSS</p>
             <p class="text">Вы научитесь проектировать мобильные приложения, которые будут решать как проблемы
               пользователей, так и задачи бизнеса.</p>
-            <p class="cens">453 000.00 KZT</p>
-            <div class="button button_bg-o">Преобрести</div>
+            <p class="cens">150 000 руб</p>
+            <a href="single-product.html" class="button button_bg-o">Узнать больше</a>
           </div>
-          <div class="products__box products__box_c3">
-            <img src="./images/dest/cartochka-1.svg" alt="img" class="products__img">
-            <p class="title-3 title-3_mt">App Design</p>
+          <div class="products__box ">
+            <img src="./images/html5_css3.png" alt="img" class="products__img">
+            <p class="title-3">HTML & CSS</p>
             <p class="text">Вы научитесь проектировать мобильные приложения, которые будут решать как проблемы
               пользователей, так и задачи бизнеса.</p>
-            <p class="cens">453 000.00 KZT</p>
-            <div class="button button_bg-o">Преобрести</div>
+            <p class="cens">150 000 руб</p>
+            <a href="single-product.html" class="button button_bg-o">Узнать больше</a>
           </div>
-          <div class="products__box products__box_c4">
-            <img src="./images/dest/cartochka-1.svg" alt="img" class="products__img">
-            <p class="title-3 title-3_mt">App Design</p>
+          <div class="products__box ">
+            <img src="./images/html5_css3.png" alt="img" class="products__img">
+            <p class="title-3">HTML & CSS</p>
             <p class="text">Вы научитесь проектировать мобильные приложения, которые будут решать как проблемы
               пользователей, так и задачи бизнеса.</p>
-            <p class="cens">453 000.00 KZT</p>
-            <div class="button button_bg-o">Преобрести</div>
+            <p class="cens">150 000 руб</p>
+            <a href="single-product.html" class="button button_bg-o">Узнать больше</a>
           </div>
-          <div class="products__box products__box_c5">
-            <img src="./images/dest/cartochka-1.svg" alt="img" class="products__img">
-            <p class="title-3 title-3_mt">App Design</p>
+          <div class="products__box ">
+            <img src="./images/html5_css3.png" alt="img" class="products__img">
+            <p class="title-3">HTML & CSS</p>
             <p class="text">Вы научитесь проектировать мобильные приложения, которые будут решать как проблемы
               пользователей, так и задачи бизнеса.</p>
-            <p class="cens">453 000.00 KZT</p>
-            <div class="button button_bg-o">Преобрести</div>
+            <p class="cens">150 000 руб</p>
+            <a href="single-product.html" class="button button_bg-o">Узнать больше</a>
           </div>
-          <div class="products__box products__box_c6">
-            <img src="./images/dest/cartochka-1.svg" alt="img" class="products__img">
-            <p class="title-3 title-3_mt">App Design</p>
+          <div class="products__box">
+            <img src="./images/html5_css3.png" alt="img" class="products__img">
+            <p class="title-3">HTML & CSS</p>
             <p class="text">Вы научитесь проектировать мобильные приложения, которые будут решать как проблемы
               пользователей, так и задачи бизнеса.</p>
-            <p class="cens">453 000.00 KZT</p>
-            <div class="button button_bg-o">Преобрести</div>
+            <p class="cens">150 000 руб</p>
+            <a href="single-product.html" class="button button_bg-o">Узнать больше</a>
           </div>
 
         </div>
@@ -135,42 +135,42 @@
         <div class="section__blocks">
           <div class="teacher__block">
             <img src="./images/dest/teacher1.webp" alt="teacher-photo" class="teacher__img">
-            <div class="section__text">
+            <div class="section__text-block">
               <p class="title-3">Lisa Niwan</p>
               <p class="text">Manager and Psychologist</p>
             </div>
           </div>
           <div class="teacher__block">
             <img src="./images/dest/teacher1.webp" alt="teacher-photo" class="teacher__img">
-            <div class="section__text">
+            <div class="section__text-block">
               <p class="title-3">Lisa Niwan</p>
               <p class="text">Manager and Psychologist</p>
             </div>
           </div>
           <div class="teacher__block">
             <img src="./images/dest/teacher1.webp" alt="teacher-photo" class="teacher__img">
-            <div class="section__text">
+            <div class="section__text-block">
               <p class="title-3">Lisa Niwan</p>
               <p class="text">Manager and Psychologist</p>
             </div>
           </div>
           <div class="teacher__block">
             <img src="./images/dest/teacher1.webp" alt="teacher-photo" class="teacher__img">
-            <div class="section__text">
+            <div class="section__text-block">
               <p class="title-3">Lisa Niwan</p>
               <p class="text">Manager and Psychologist</p>
             </div>
           </div>
           <div class="teacher__block">
             <img src="./images/dest/teacher1.webp" alt="teacher-photo" class="teacher__img">
-            <div class="section__text">
+            <div class="section__text-block">
               <p class="title-3">Lisa Niwan</p>
               <p class="text">Manager and Psychologist</p>
             </div>
           </div>
           <div class="teacher__block">
             <img src="./images/dest/teacher1.webp" alt="teacher-photo" class="teacher__img">
-            <div class="section__text">
+            <div class="section__text-block">
               <p class="title-3">Lisa Niwan</p>
               <p class="text">Manager and Psychologist</p>
             </div>
@@ -178,35 +178,16 @@
         </div>
       </div>
     </section>
-    <section class="section section_pb0 menu" id="webinar">
-      <div class="container">
-        <div class="section__flex">
-          <div class="section__text">
-            <h2 class="title-2">Вебинары</h2>
-            <p class="text">Специально для наших студентов, мы разработали приложение для удобного прохождения всех
-              курсов
-              обучения. В нем вы
-              сможете выполнять домашние задания, смотреть вебинары общаться с другими студентами и преподавателями.</p>
-          </div>
-          <div class="button button_bg-c">Записаться
-          </div>
-        </div>
-        <img src="./images/dest/webinar.webp" alt="webinar" class="webinar-img">
-      </div>
-    </section>
-    <section class="section">
+    <section class="section section_pb0 menu" id="work">
       <div class="container">
         <div class="section__flex">
           <div class="section__text">
             <h2 class="title-2">Работы наших учеников</h2>
-            <p class="text">После прохождения курсов Вы сможете профессионально работать с типографикой, палитрой,
-              создавать и добавлять в макет
-              анимацию. Вы узнаете о сетках, колонках и композиции. Научитесь создавать интерфейс сайта, чтобы им
-              хотелось
-              пользоваться.</p>
+            <p class="text">После прохождения курсов Вы сможете профессионально работать HTML и CSS, Vue, Wordpress,
+              создавать и добавлять с помощью нативного Java Script
+              анимацию. </p>
           </div>
-          <div class="button button_bg-c">Хочу также
-          </div>
+
         </div>
         <div class="section__blocks">
           <img src="./images/dest/project1.webp" alt="project" class="project-img">
@@ -214,6 +195,33 @@
           <img src="./images/dest/project1.webp" alt="project" class="project-img">
           <img src="./images/dest/project1.webp" alt="project" class="project-img">
         </div>
+      </div>
+    </section>
+    <section class="section menu" id="#contact">
+      <div class="container">
+        <div class="section__flex section__flex_contact">
+          <div class="section__text">
+            <h2 class="title-2">Контакты</h2>
+            <p class="text">Компания ТОО "IT Solutions 7"</p>
+            <a href="#" class="text footer__email">info@digeasy.net</a>
+            <div class="teacher__block teacher__block-director">
+              <p class="title-3">Директор</p>
+              <img src="./images/dest/teacher1.webp" alt="director-photo" class="director-photo__img">
+              <div class="section__text-block">
+                <p class="text">Игорь</p>
+              </div>
+            </div>
+          </div>
+          <div class="section__block section__block_map">
+            <p class="text">ул. Гоголя, 47, Белореченск, Краснодарский край, 352632
+            </p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2833.153363451434!2d39.86468909102261!3d44.75728690574525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f0c5ec6d0961bd%3A0x6ef2b7784d0d3dfc!2z0YPQuy4g0JPQvtCz0L7Qu9GPLCA0Nywg0JHQtdC70L7RgNC10YfQtdC90YHQuiwg0JrRgNCw0YHQvdC-0LTQsNGA0YHQutC40Lkg0LrRgNCw0LksIDM1MjYzMg!5e0!3m2!1sru!2sru!4v1701766976405!5m2!1sru!2sru"
+              height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -232,29 +240,42 @@
       <div class="container">
         <div class="modal__flex">
           <div class="modal-content">
-            <div class="title-modal">Какой курс выбрать?</div>
-            <div class="text-modal">Нужна помощь с определением специальности и какой курс будет наиболее полезным -
-              напиши нам!</div>
+            <div class="title-modal">Вход</div>
             <form class="form" action="">
-              <div class="form__block">
+              <input type="text" class="forminput " id="modal-name" name="modal-name" placeholder="Логин" required>
+              <input type="text" class="forminput " id="modal-tel" name="modal-tel" placeholder="Пароль" required>
+              <button class="button button_bg-o button_modal">Вход</button>
+              <p class="button button_bg-c button_modal" id="button-reg">Регистрация</p>
+              <div class="response"></div>
+              </p>
+            </form>
+          </div>
+        </div>
 
-                <input type="text" class="forminput " id="modal-name" name="modal-name" placeholder="Name">
-              </div>
-              <div class="form__block">
-
-                <input type="text" class="forminput " id="modal-tel" name="modal-tel" placeholder="Phone">
-              </div>
-              <div class="form__block">
-
-                <input type="email" class="forminput " id="modal-email" name="modal-email" placeholder="Email">
-              </div>
-              <div class="form__block">
-
-                <input type="text" class="forminput " id="modal-email" name="modal-email" placeholder="Коментарий">
-              </div>
-              <div class="form__block">
-                <button class="button button_bg-o button_modal">Отправить</button>
-              </div>
+      </div>
+    </section>
+    <section class="modal-reg" id="modal-reg">
+      <a href="javascript:void(0);" class="modal-content__close-reg"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+          height="32" viewBox="0 0 32 32" fill="none">
+          <path
+            d="M4.94367 27.9953C4.70304 27.9953 4.46004 27.9033 4.27602 27.7193C3.90799 27.3513 3.90799 26.7545 4.27602 26.3841L26.3863 4.276C26.7544 3.908 27.3536 3.908 27.7216 4.276C28.0897 4.64399 28.0897 5.24081 27.7216 5.61117L5.60896 27.7216C5.42495 27.9056 5.18431 27.9976 4.94132 27.9976L4.94367 27.9953Z"
+            fill="#DDDDDD" />
+          <path
+            d="M27.054 27.9952C26.8133 27.9952 26.5703 27.9032 26.3863 27.7192L4.27602 5.60872C3.90799 5.24073 3.90799 4.64391 4.27602 4.27356C4.64406 3.90556 5.24329 3.90556 5.61132 4.27356L27.724 26.384C28.092 26.752 28.092 27.3489 27.724 27.7192C27.54 27.9032 27.2993 27.9952 27.0563 27.9952H27.054Z"
+            fill="#DDDDDD" />
+        </svg></a>
+      <div class="container">
+        <div class="modal__flex">
+          <div class="modal-content">
+            <div class="title-modal">Регистрация</div>
+            <form class="form" action="">
+              <input type="text" class="forminput " id="modal-name" name="modal-name" placeholder="Имя" required>
+              <input type="email" class="forminput " id="modal-email" name="modal-email" placeholder="Почта" required>
+              <input type="text" class="forminput " id="modal-log" name="modal-log" placeholder="Логин" required>
+              <input type="password" class="forminput " id="modal-pass" name="modal-pass" placeholder="Пароль" required>
+              <input type="password" class="forminput " id="modal-pass" name="modal-pass" placeholder="Повторите пароль"
+                required>
+              <button class="button button_bg-o button_modal">Регистрация</button>
               <div class="response"></div>
               </p>
             </form>
@@ -265,7 +286,7 @@
     </section>
     <div class="container">
       <div class="footer__top">
-        <img src="./images/logo-light.svg" alt="logo" class="footer-logo">
+        <img src="./images/logo-light.png" alt="logo" class="footer-logo">
         <ul class="footer__menu-list">
           <li class="footer__menu-item">
             <a href="#curs" class="footer__menu-link">Курсы</a>
@@ -274,14 +295,11 @@
             <a href="#teacher" class="footer__menu-link">Учителя</a>
           </li>
           <li class="footer__menu-item">
-            <a href="#webinar" class="footer__menu-link">Вебинары</a>
-          </li>
-          <li class="footer__menu-item">
             <a href="#" class="footer__menu-link">Политика конфиденциальности</a>
           </li>
         </ul>
       </div>
-      <div class="footer__mid " id="contact">
+      <div class="footer__mid ">
         <div class="footer__text-block">
           <p class="footer__text">Компания ТОО "IT Solutions 7"</p>
           <p class="footer__text">Адрес 055552, Казахсиан, г. Алматы, Алмалиснкий р-он, г. Алматы, ул. Гагарина, д. 124
@@ -293,9 +311,7 @@
         <div class="footer__bottom-blok">
           <p class="footer__bottom-text">Copyright @ DigEasy 2022, All rights reserved</p>
         </div>
-        <a href="#" class="footer__bottom-link-pay">
-          <img src="./images/dest/pay.svg" alt="pay" class="footer__bottom-img">
-        </a>
+
 
         <div class="footer__bottom-blok">
           <a href="#" class="footer__bottom-text footer__bottom-link">ПОЛИТИКА ВОЗВРАТА</a>
@@ -305,6 +321,44 @@
     </div>
   </footer>
   <script src="js/app.min.js"></script>
+
+  <script>
+
+    var items = document.querySelectorAll('.menu__item');
+    const titles = document.querySelectorAll('.menu');
+
+    window.addEventListener('scroll', () => {
+      let scrolled = window.pageYOffset;
+
+
+      var active;
+      for (var i = titles.length - 1; i >= 0; i--) {
+        console.log(titles[i].offsetTop);
+
+        if (titles[i].offsetTop - 555 < scrolled) {
+          active = i;
+          break;
+        }
+        if (titles[i].offsetTop + 300 > scrolled) {
+          items[i].classList.remove('active');
+        }
+      }
+
+      if (active !== undefined) {
+        var active = items[active];
+        if (!active.classList.contains("active")) {
+          let old = document.querySelector('.menu__item.active');
+          console.log(old);
+
+          if (old) {
+            old.classList.remove('active');
+          }
+          active.classList.add('active');
+        } else { }
+      }
+
+    });
+  </script>
 </body>
 
 </html>

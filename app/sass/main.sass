@@ -25,29 +25,40 @@
   width: 100%
   +media-breakpoint-up(sm)
     width: 60vw
+  &_sp
+    width: 100%
+  &_ac
+    margin-top: 50px
 
 .section__flex
   +media-breakpoint-up(sm)
     display: flex
     align-items: center
     justify-content: space-between
+  &_contact
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    +media-breakpoint-up(md)
+      flex-direction: row
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
 .title
-  color: #000
+  color: #380000
   font-size: 32px
   font-weight: 700
   line-height: 48px
-  margin-bottom: 20px
-  span
-    background-color: #F4D3A1
-    padding: 0 5px
-  &_center
+  margin-bottom: 20pxэ
+  &_aling
     text-align: center
   +media-breakpoint-up(sm)
     font-size: 54px
     line-height: 64px
 
 .title-2
-  color: #000000
+  color: #ca0011
   font-size: 24px
   font-family: 'Mediator',Arial,sans-serif
   line-height: 48px
@@ -56,7 +67,7 @@
     font-size: 36px
 
 .title-3
-  color: #000000
+  color: #ce0000
   font-size: 18px
   font-family: 'Mediator',Arial,sans-serif
   line-height: 48px
@@ -67,7 +78,7 @@
     margin-top: -65px
 
 .text
-  color: #6b625e
+  color: #ffffff
   font-size: 14px
   font-family: 'Mediator',Arial,sans-serif
   line-height: 24px
@@ -76,7 +87,7 @@
     font-size: 18px
 
 .cens
-  color: rgb(36, 16, 8)
+  color: rgb(255, 255, 255)
   font-size: 14px
   font-weight: 600
   +media-breakpoint-up(sm)
@@ -101,19 +112,27 @@
     width: 172px
     height: 56px
   &_bg-o
-    background-color: #ff733b
+    background-color: #ff3b3b
     color: #fff
     &:hover
-      background-color: #e06936
+      background-color: #fc1f1f
+      color: #fff
+      text-decoration: none
     &:active
-      background-color: #e06936
+      background-color: #fc1f1f
+      color: #fff
+      text-decoration: none
   &_bg-c
-    background-color: #f4d3a1
-    color: #000
+    background-color: #420000
+    color: #ffffff
     &:hover
-      background-color: #e6c185
+      background-color: #b10000
+      color: #fff
+      text-decoration: none
     &:active
-      background-color: #e6c185
+      background-color: #b10000
+      color: #fff
+      text-decoration: none
   &_modal
     width: 100%
 
@@ -132,7 +151,7 @@
     content: ""
     width: 25px
     height: 2px
-    background-color: #000
+    background-color: #ffffff
     transition: all 0.5s
   &::after
     position: absolute
@@ -141,7 +160,7 @@
     content: ""
     width: 25px
     height: 2px
-    background-color: #000
+    background-color: #ffffff
     transition: all 0.3s
   +media-breakpoint-up(md)
     display: none
@@ -157,13 +176,13 @@
 .burger-line
   width: 25px
   height: 2px
-  background-color: #000
+  background-color: #ffffff
   &.active
     display: none
 
 /*header*/
 .header
-  background-color: rgb(244, 236, 224)
+  background-color: #27283D
   position: fixed
   width: 100%
   z-index: 3
@@ -171,7 +190,6 @@
     box-shadow: rgba(0,0,0,.13) 0 4px 16px
 
 .header__block
-  padding: 25px 0
   display: flex
   width: 100%
   justify-content: space-between
@@ -196,18 +214,29 @@
     padding: 0
 
 .menu__link
-  color: #000
+  color: #ffffff
   text-decoration: none
   transition: 0.5s
+  cursor: pointer
   &:hover
     text-decoration: none
-    color: #db7857
+    color: #7A000A
   &:active
     text-decoration: none
-    color: #db7857
+    color: #7A000A
+
+.menu__img
+  width: 45px
+
+.menu__item
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  cursor: pointer
 
 .menu__item.active>.menu__link
-  color: #241008
+  color: #bb1a28
   font-weight: 400
   position: relative
   transition: all 0.3s ease
@@ -219,8 +248,8 @@
     width: 100%
     height: 2px
     bottom: -1px
-    border-bottom: 1px solid #241008
-    box-shadow: inset 0px -1px 0px 0px #241008
+    border-bottom: 1px solid #bb1a28
+    box-shadow: inset 0px -1px 0px 0px #bb1a28
 
 .menu__lang
 
@@ -229,14 +258,12 @@
     cursor: pointer
 
 .logo
-  width: 100px
+  width: 150px
   height: 100%
-  +media-breakpoint-up(md)
-    width: 160px
 
 .nav-menu
+  background-color: #27283d
   position: absolute
-  background-color: rgb(244, 236, 224)
   top: 0
   right: 0
   transition: 0.5s
@@ -251,12 +278,11 @@
 
 .hero
   display: flex
-  padding-top: 25vh
   justify-content: center
-  align-items: start
-  height: 120vh
+  align-items: center
+  height: 500px
   +media-breakpoint-up(lg)
-    height: 140vh
+    height: 100vh
 
 .hero__block
   width: 100%
@@ -272,17 +298,17 @@
     position: absolute
     top: 0
     left: 0
-    background-color: #F4ECE0
+    background-color: #ffffff
     border-radius: 25px
     opacity: 0.8
     z-index: 1
-    +media-breakpoint-up(sm)
-      content: none
   > .title
     position: relative
     z-index: 2
   +media-breakpoint-up(md)
     width: 768px
+  +media-breakpoint-up(lg)
+    width: 900px
 
 .hero__button-block
   display: flex
@@ -303,6 +329,16 @@
   +media-breakpoint-up(sm)
     gap: 40px
   margin-top: 50px
+  &_sp
+    align-items: center
+    +media-breakpoint-up(lg)
+      flex-wrap: nowrap
+  &_ac
+    margin-top: 10px
+    +media-breakpoint-up(sm)
+      margin-top: 20px
+    +media-breakpoint-up(md)
+      margin-top: 30px
 
 .products__box
   display: flex
@@ -312,21 +348,30 @@
   width: 100%
   border-radius: 8px
   padding: 20px 0
+  background-color: #636394
   +media-breakpoint-up(sm)
     width: 360px
     padding: 30px
-  &_c1
-    background-color: #e3f8fa
-  &_c2
-    background-color: #f4ece0
-  &_c3
-    background-color: #f5e6fe
-  &_c4
-    background-color: #ffe6e2
-  &_c5
-    background-color: #e0e6f4
-  &_c6
-    background-color: #e2fae3
+  &-text
+    display: flex
+    flex-direction: column
+    align-items: center
+    flex: 0 0 50%
+    &>.text
+      text-align: left
+  &_sp
+    width: 100%
+    padding: 20px
+    flex-direction: column-reverse
+    +media-breakpoint-up(md)
+      flex-direction: row
+
+.products__img
+  width: 150px
+  &_sp
+    width: 50vw
+    +media-breakpoint-up(md)
+      width: 100%
 
 /*teacher*/
 
@@ -338,6 +383,18 @@
     flex-direction: column
     align-items: flex-start
     width: 360px
+  &_sp
+    flex-direction: row
+    width: 100%
+    align-items: flex-end
+    +media-breakpoint-up(lg)
+      flex-direction: column
+      align-items: center
+      width: 360px
+  &-director
+    margin-top: 30px
+    flex-direction: column
+    align-items: flex-start
 
 .teacher__img
   border-radius: 8px
@@ -362,8 +419,8 @@
 /*footer*/
 
 .footer
-  padding: 50px 0
-  background-color: #241008
+  padding-bottom: 50px
+  background-color: #27283D
 
 .footer-logo
   width: 200px
@@ -403,7 +460,10 @@
   text-decoration: none
   color: #fff
   &:hover
-    color: #ff733b
+    color: #990202
+    text-decoration: none
+  &:active
+    color: #990202
     text-decoration: none
 
 .footer__mid
@@ -434,6 +494,7 @@
 .footer__email
   color: #ffffff
   text-decoration: none
+  margin-bottom: 1rem
   &:hover
     color: #ffffff
     text-decoration: none
@@ -464,7 +525,10 @@
 .footer__bottom-link
   text-decoration: none
   &:hover
-    color: #ff733b
+    color: #ff2323
+    text-decoration: none
+  &:active
+    color: #ff2323
     text-decoration: none
 
 .footer__bottom-img
@@ -473,15 +537,38 @@
 /*modal*/
 
 .modal
-  position: absolute
+  position: fixed
   top: 0
   left: 0
   z-index: 10
   width: 100%
-  height: 100%
+  height: 100vh
   background-color: rgba(0,0,0,.6)
   opacity: 0
   transition: 0.5s
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  transform: translateY(-10000%)
+  &.active
+    opacity: 1
+    transform: translateY(0%)
+
+.modal-reg
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 10
+  width: 100%
+  height: 100vh
+  background-color: rgba(0,0,0,.6)
+  opacity: 0
+  transition: 0.5s
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
   transform: translateY(-10000%)
   &.active
     opacity: 1
@@ -495,7 +582,20 @@
   top: 5px
   right: 5px
   z-index: 3
-  background-color: #241008
+  background-color: #240808
+  border: 1px solid #fff
+  +media-breakpoint-up(sm)
+    top: 20px
+    right: 20px
+    border: none
+    background: none
+
+.modal-content__close-reg
+  position: absolute
+  top: 5px
+  right: 5px
+  z-index: 3
+  background-color: #240808
   border: 1px solid #fff
   +media-breakpoint-up(sm)
     top: 20px
@@ -505,7 +605,7 @@
 
 .modal-content
   padding: 20px 25px
-  background-color: #241008
+  background-color: #270101
   display: flex
   justify-content: center
   flex-direction: column
@@ -553,9 +653,9 @@
   gap: 20px
 
 .forminput
-  color: #f4ece0
-  border: 1px solid #dbd8d2
-  background-color: #241008
+  color: #ffffff
+  border: 1px solid #ffffff
+  background-color: #270101
   height: 60px
   padding: 0 20px
   font-size: 16px
@@ -563,3 +663,41 @@
   width: 100%
   outline: none
   border-radius: 4px
+
+.button-setings
+  display: flex
+  align-items: center
+  +media-breakpoint-up(md)
+    flex-direction: column
+  &:hover>img
+    filter: contrast(1)
+    text-decoration: none
+    color: #7A000A
+  &:hover>p
+    color: #7A000A
+  &>img
+    object-fit: cover
+    filter: contrast(0)
+    transition: 0.5s
+    +media-breakpoint-up(md)
+      margin-bottom: -10px
+  &>p
+    margin: 0
+    +media-breakpoint-up(md)
+      margin-top: -5px
+
+.map
+  width: 96vw
+  +media-breakpoint-up(md)
+    width: 50vw
+
+.section__block_map
+  +media-breakpoint-up(md)
+    margin-left: 40px
+
+.director-photo__img
+  margin-top: -35px
+  margin-bottom: -15px
+  width: 200px
+  +media-breakpoint-up(md)
+    width: 300px
